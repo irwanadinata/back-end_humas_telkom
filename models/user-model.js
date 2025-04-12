@@ -58,9 +58,3 @@ User.findByEmail = async (email) => {
     throw err;
   }
 };
-
-User.getUserById = (id) => {
-  
-}
-
-export default User;
