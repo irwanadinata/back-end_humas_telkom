@@ -55,7 +55,6 @@ export const addLiputanKegiatan = async (req, res) => {
       waktu_mulai,
       waktu_selesai,
       tempat,
-      status,
     } = req.body;
 
     const lampiran = req.file ? req.file.filename : null;
