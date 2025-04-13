@@ -58,3 +58,5 @@ User.findByEmail = async (email) => {
     throw err;
   }
 };
+
+export default User;
