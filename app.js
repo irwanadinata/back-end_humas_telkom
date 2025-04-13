@@ -6,6 +6,9 @@ import multer from "multer";
 import connection from "./models/connection.js";
 import authRoute from "./routes/auth.route.js";
 import liputanKegiatanRoute from "./routes/liputan-kegiatan.route.js";
+import kemitraanRoute from "./routes/kemitraan.routes.js";
+import penerbitanBeritaRoute from "./routes/penerbitan-berita.routes.js";
+import peminjamanAlatRoute from "./routes/peminjaman-alat.routes.js";
 
 dotenv.config();
 
@@ -23,6 +26,9 @@ app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 // Routes
 app.use("/auth", authRoute);
 app.use("/liputan-kegiatan", liputanKegiatanRoute);
+app.use("/kemitraan", kemitraanRoute);
+app.use("/penerbitan-berita", penerbitanBeritaRoute);
+app.use("/peminjaman-alat", peminjamanAlatRoute);
 
 // Cek koneksi database
 connection.getConnection((err) => {
