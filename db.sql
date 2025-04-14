@@ -59,7 +59,7 @@ CREATE TABLE kemitraan (
     posisi VARCHAR(100),
     email VARCHAR(100),
     nomorwa VARCHAR(20),
-    jenis kemitraan VARCHAR(20),
+    jeniskemitraan VARCHAR(20),
     deskripsi TEXT,
     lampiran VARCHAR(255) NULL,
     status ENUM('pending', 'accepted', 'rejected') DEFAULT 'pending',
