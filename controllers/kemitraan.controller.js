@@ -44,7 +44,15 @@ export const getKemitraanByUser = async (req, res) => {
 // CREATE
 export const addKemitraan = async (req, res) => {
   try {
-    const { nama, perusahaan, posisi, email, nomorwa, deskripsi } = req.body;
+    const {
+      nama,
+      perusahaan,
+      posisi,
+      email,
+      nomorwa,
+      jeniskemitraan,
+      deskripsi,
+    } = req.body;
 
     const lampiran = req.file ? req.file.filename : null;
 
@@ -54,6 +62,7 @@ export const addKemitraan = async (req, res) => {
       posisi,
       email,
       nomorwa,
+      jeniskemitraan,
       deskripsi,
       lampiran,
       user_id: req.user.id,
@@ -80,6 +89,7 @@ export const updateKemitraan = async (req, res) => {
       posisi,
       email,
       nomorwa,
+      jeniskemitraan,
       deskripsi,
       lampiran,
       status,
@@ -105,6 +115,7 @@ export const updateKemitraan = async (req, res) => {
       posisi,
       email,
       nomorwa,
+      jeniskemitraan,
       deskripsi,
       lampiran,
       status,
